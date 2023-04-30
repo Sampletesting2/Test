@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>My Gallery</title>
+    <title>My Services</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -11,20 +11,80 @@
         <ul>
           <li class="logo"><a href="#">My Website</a></li>
           <li><a href="index.html">Home</a></li>
-          <li class="active"><a href="#">About</a></li>
+          <li class="active"><a href="#">Services</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
     </header>
     <main class="text-center">
-      <h1>My Gallery</h1>
-      <p>Here are some photos:</p>
-      <div class="gallery">
-        <img src="photo1.jpg" alt="Photo 1">
-        <img src="photo2.jpg" alt="Photo 2">
-        <img src="photo3.jpg" alt="Photo 3">
+      <h1>Our Services</h1>
+      <p>Here are some of the services we offer:</p>
+      <div class="services">
+        <div class="service">
+          <img src="./Refurbish.jpg" alt="Refurbish" width="400">
+          <h2>Refurbishing</h2>
+          <p>We offer top-notch refurbishing services for a variety of products.</p>
+        </div>
+        <div class="service">
+          <img src="service2.jpg" alt="Service 2" width="400">
+          <h2>Service 2</h2>
+          <p>Description of service 2.</p>
+        </div>
+        <div class="service">
+          <img src="service3.jpg" alt="Service 3" width="400">
+          <h2>Service 3</h2>
+          <p>Description of service 3.</p>
+        </div>
+      </div>
+      <div class="calculator">
+        <h2>Calculator</h2>
+        <form>
+          <input type="number" id="num1" placeholder="Enter first number">
+          <br>
+          <input type="number" id="num2" placeholder="Enter second number">
+          <br>
+          <button type="button" onclick="add()">Add</button>
+          <button type="button" onclick="subtract()">Subtract</button>
+          <button type="button" onclick="multiply()">Multiply</button>
+          <button type="button" onclick="divide()">Divide</button>
+        </form>
+        <br>
+        <p>Result: <span id="result"></span></p>
       </div>
     </main>
-  </body>
+    <script>
+      function add() {
+        var num1 = parseInt(document.getElementById("num1").value);
+        var num2 = parseInt(document.getElementById("num2").value);
+        var result = num1 + num2;
+        document.getElementById("result").innerHTML = result;
+      }
+
+      function subtract() {
+        var num1 = parseInt(document.getElementById("num1").value);
+        var num2 = parseInt(document.getElementById("num2").value);
+        var result = num1 - num2;
+        document.getElementById("result").innerHTML = result;
+      }
+
+      function multiply() {
+        var num1 = parseInt(document.getElementById("num1").value);
+        var num2 = parseInt(document.getElementById("num2").value);
+        var result = num1 * num2;
+        document.getElementById("result").innerHTML = result;
+      }
+
+      function divide() {
+        var num1 = parseInt(document.getElementById("num1").value);
+        var num2 = parseInt(document.getElementById("num2").value);
+        var result = num1 / num2;
+        document.getElementById("result").innerHTML = result;
+      }
+    </script>
+  </body
 </html>
+
+
+
+
 
